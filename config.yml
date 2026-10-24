@@ -1,0 +1,43 @@
+# CLC Ethiopia admin configuration (Sveltia CMS)
+# IMPORTANT: change "repo" if your repository is not named clc-ethiopia.
+backend:
+  name: github
+  repo: Zekarias1616/clc-ethiopia
+  branch: main
+
+# New photos are saved here (the site's existing photos are not moved)
+media_folder: images/news
+public_folder: images/news
+
+site_url: https://zekarias1616.github.io/clc-ethiopia/
+
+collections:
+  - name: news
+    label: News & Events
+    files:
+      - name: news
+        label: News & Events Gallery
+        file: data/news.json
+        format: json
+        fields:
+          - label: News items
+            name: items
+            widget: list
+            label_singular: News item
+            add_to_top: true
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Date (used to sort, newest first), name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - label: Category (filter button)
+                name: category
+                widget: select
+                options:
+                  - { label: National Assemblies, value: assemblies }
+                  - { label: Retreats & Formation, value: retreats }
+                  - { label: Youth & Action, value: youth }
+              - { label: Small label (e.g. Silent Retreat), name: tag, widget: string }
+              - { label: Place or date text (shown on the card), name: location, widget: string, required: false }
+              - { label: Photo (resize to about 1200px wide first), name: image, widget: image }
+              - { label: Photo description, name: alt, widget: string, required: false }
+              - { label: News text (leave a blank line between paragraphs), name: text, widget: text }

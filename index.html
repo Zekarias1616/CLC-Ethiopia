@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLC Ethiopia-CVX</title>
+  <meta name="description" content="Ethiopian Christian Life Community (CLC Ethiopia) - Seeking and Finding God in Everything through Ignatian Spirituality, Community, and Apostolic Mission." />
+
+  <!-- Google Fonts: Cinzel, EB Garamond, Plus Jakarta Sans, and Noto Sans Ethiopic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+Ethiopic:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clcBurgundy: '#800020',
+            clcCrimson: '#8A1C14',
+            clcBurgundyDark: '#560015',
+            clcGold: '#C59B27',
+            clcGoldLight: '#E5C058',
+            clcGoldDark: '#937213',
+            clcEmerald: '#1B4D3E',
+            clcCharcoal: '#22252A',
+            clcDarkSlate: '#181B1F',
+            clcCream: '#FDFBF7',
+            clcWarmWhite: '#F8F5EF'
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'EB Garamond', 'serif'],
+            body: ['Plus Jakarta Sans', 'Noto Sans Ethiopic', 'sans-serif'],
+            ethiopic: ['Noto Sans Ethiopic', 'sans-serif'],
+            nav: ['Montserrat', 'Noto Sans Ethiopic', 'sans-serif']
+          },
+          boxShadow: {
+            'sacred': '0 10px 30px -10px rgba(138, 28, 20, 0.25)',
+            'card-3d': '0 15px 35px -10px rgba(24, 27, 31, 0.08), 0 0 1px 1px rgba(197, 155, 39, 0.12)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glass-nav {
+      background: rgba(253, 251, 247, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(197, 155, 39, 0.2);
+    }
+    
+    .burgundy-gradient {
+      background: linear-gradient(135deg, #8A1C14 0%, #800020 60%, #520014 100%);
+    }
+
+    .tilt-card {
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+    }
+    .tilt-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 36px -10px rgba(128, 0, 32, 0.14);
+    }
+
+    .slide-item {
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    /* ===== Navbar typography (change --nav-font to switch the font everywhere in the menu) ===== */
+    :root { --nav-font: 'Montserrat', 'Noto Sans Ethiopic', sans-serif; }
+    header nav, header nav a, header nav button, header nav span,
+    #mobileMenu, #mobileMenu a {
+      font-family: var(--nav-font);
+      letter-spacing: 0.03em;
+    }
+    header nav > a, header nav > div > button { font-weight: 600; text-transform: uppercase; font-size: 11px; letter-spacing: 0.06em; }
+    header nav .absolute a { text-transform: none; font-weight: 500; letter-spacing: 0.01em; }
+
+    /* Centered, styled nav links with animated gold underline */
+    header nav > a, header nav > div > button { position: relative; color: #22252A; padding: 0.5rem 0.7rem; }
+    header nav > a::after, header nav > div > button::after {
+      content: ""; position: absolute; left: 50%; bottom: 2px; width: 0; height: 2px;
+      background: linear-gradient(90deg, #C59B27, #800020); border-radius: 2px;
+      transform: translateX(-50%); transition: width .25s ease;
+    }
+    header nav > a:hover::after, header nav > div:hover > button::after { width: 70%; }
+    header nav > a:hover, header nav > div:hover > button { color: #800020; }
+    header nav > a:first-child { color: #800020; }
+    header nav > a:first-child::after { width: 70%; }
+    /* Dropdowns centered under their menu item */
+    header nav .absolute { left: 50%; transform: translateX(-50%); text-align: left; }
+    header nav .absolute a { justify-content: flex-start; text-align: left; }
+    .nav-btn { font-family: var(--nav-font); }
+
+    /* ===== ExCo profile photos ===== */
+    .exco-photo { position: relative; overflow: hidden; }
+    .exco-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  </style>
+</head>
+
+<body class="bg-clcCream font-body text-clcCharcoal antialiased selection:bg-clcGold selection:text-white">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="sticky top-0 z-50 glass-nav shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex xl:grid xl:grid-cols-[auto_1fr_auto] xl:gap-x-10 items-center justify-between h-20">
+        
+        <!-- Official Logo & Title -->
+        <a href="#" class="flex items-center gap-3 group">
+          <!-- Relative Logo Image Address -->
+          <img 
+            src="photo_2023-09-21_01-53-10.jpg" 
+            alt="Christian Life Community Ethiopia - የክርስቲያናዊ ሕይወት ማኅበር - ኢትዮጵያ" 
+            class="w-12 h-12 object-contain rounded-full shadow-sm group-hover:scale-105 transition duration-300"
+            onerror="this.onerror=null; this.src='photo_2023-09-21_01-53-10.jpg';"
+          />
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-serif font-bold text-lg tracking-wider text-clcBurgundy">CLC</span>
+              <span class="font-serif font-semibold text-lg tracking-wide text-clcCharcoal">ETHIOPIA</span>
+            </div>
+            <p class="text-[9.5px] tracking-widest uppercase font-semibold text-clcGoldDark -mt-1 font-ethiopic">
+              የክርስቲያናዊ ሕይወት ማኅበር • CVX
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items (Compact text: text-xs) -->
+        <nav class="hidden xl:flex items-center justify-center space-x-1 text-xs font-medium text-clcCharcoal/85">
+          
+          <a href="#" class="px-2.5 py-1.5 text-clcBurgundy font-semibold hover:text-clcCrimson transition">Home</a>
+
+          <!-- About Us Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-2.5 py-1.5 hover:text-clcBurgundy transition">
+              <span>About Us</span>
+              <i data-lucide="chevron-down" class="w-3 h-3 text-gray-500 group-hover:text-clcBurgundy transition"></i>
+            </button>
+            <div class="absolute left-0 mt-1.5 w-52 bg-white rounded-xl shadow-xl border border-clcGold/20 py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+              <a href="#" data-info="charism" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Charism & Identity</a>
+              <a href="#" data-info="history" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">History in Ethiopia</a>
+              <a href="#excos" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">National Leadership (ExCos)</a>
+              <a href="https://cvx-clc.net" target="_blank" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px] flex justify-between items-center">
+                <span>CVX World Secretariat</span>
+                <i data-lucide="external-link" class="w-3 h-3 text-clcGold"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Our Pillars Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-2.5 py-1.5 hover:text-clcBurgundy transition">
+              <span>Our Pillars</span>
+              <i data-lucide="chevron-down" class="w-3 h-3 text-gray-500 group-hover:text-clcBurgundy transition"></i>
+            </button>
+            <div class="absolute left-0 mt-1.5 w-52 bg-white rounded-xl shadow-xl border border-clcGold/20 py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+              <a href="#" data-readmore="pillar" data-pillar="spirituality" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Spirituality (መንፈሳዊነት)</a>
+              <a href="#" data-readmore="pillar" data-pillar="community" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Community (ኅብረት)</a>
+              <a href="#" data-readmore="pillar" data-pillar="mission" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Mission (ተልዕኮ)</a>
+            </div>
+          </div>
+
+          <!-- Ignatian Spirituality Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-2.5 py-1.5 hover:text-clcBurgundy transition">
+              <span>Ignatian Spirituality</span>
+              <i data-lucide="chevron-down" class="w-3 h-3 text-gray-500 group-hover:text-clcBurgundy transition"></i>
+            </button>
+            <div class="absolute left-0 mt-1.5 w-60 bg-white rounded-xl shadow-xl border border-clcGold/20 py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+              <a href="#" data-info="ignatian" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">What is Ignatian Spirituality?</a>
+              <a href="#examen" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">The Daily Examen Tool</a>
+              <a href="#" data-info="exercises" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Spiritual Exercises & Retreats</a>
+              <a href="#" data-info="library" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Digital Resource Library</a>
+            </div>
+          </div>
+
+          <!-- What We Do -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-2.5 py-1.5 hover:text-clcBurgundy transition">
+              <span>What We Do</span>
+              <i data-lucide="chevron-down" class="w-3 h-3 text-gray-500 group-hover:text-clcBurgundy transition"></i>
+            </button>
+            <div class="absolute left-0 mt-1.5 w-52 bg-white rounded-xl shadow-xl border border-clcGold/20 py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+              <a href="#" data-info="formation" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Catechism & Formation</a>
+              <a href="#" data-info="youth" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Youth & University Ministry</a>
+              <a href="#" data-info="family" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Family & Marriage Support</a>
+            </div>
+          </div>
+
+          <!-- Local Communities -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-2.5 py-1.5 hover:text-clcBurgundy transition">
+              <span>Communities</span>
+              <i data-lucide="chevron-down" class="w-3 h-3 text-gray-500 group-hover:text-clcBurgundy transition"></i>
+            </button>
+            <div class="absolute left-0 mt-1.5 w-56 bg-white rounded-xl shadow-xl border border-clcGold/20 py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+              <a href="#" data-info="groups" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">How Small Groups Work</a>
+              <a href="#" data-info="hubs" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Find Local Hubs</a>
+              <a href="#" data-info="voices" class="block px-3.5 py-1.5 hover:bg-clcWarmWhite hover:text-clcBurgundy text-[11px]">Testimonials</a>
+            </div>
+          </div>
+
+          <!-- News & Events -->
+          <a href="#events" class="px-2.5 py-1.5 hover:text-clcBurgundy transition">News & Events</a>
+
+          <!-- Contact Us -->
+          <a href="#contact" class="px-2.5 py-1.5 hover:text-clcBurgundy transition">Contact Us</a>
+        </nav>
+
+        <!-- Right Side: Language Switcher directly next to "Join Community" -->
+        <div class="hidden sm:flex items-center space-x-2">
+          
+          <!-- Language Switcher Button -->
+          <button id="langToggleBtn" onclick="toggleLanguage()" class="nav-btn flex items-center gap-1 px-2 py-1 rounded-md border border-clcGold/40 text-[10px] font-semibold text-clcCharcoal hover:border-clcBurgundy hover:text-clcBurgundy bg-white transition">
+            <i data-lucide="languages" class="w-3 h-3 text-clcGoldDark"></i>
+            <span id="currentLangLabel">አማርኛ</span>
+          </button>
+
+          <!-- Primary CTA Button -->
+          <a href="#join" class="nav-btn px-3 py-1.5 rounded-md bg-clcBurgundy hover:bg-clcCrimson text-white text-[10px] font-semibold tracking-wider uppercase transition shadow-sm">
+            Join Community
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex xl:hidden items-center gap-2">
+          <button onclick="toggleLanguage()" class="px-2 py-1 rounded border border-clcGold/40 text-xs font-semibold">
+            <span id="mobileLangLabel">አማ</span>
+          </button>
+          <button id="mobileMenuBtn" class="text-clcCharcoal p-1.5 focus:outline-none" aria-label="Toggle Navigation">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden xl:hidden bg-white border-b border-clcGold/20 px-6 py-4 transition-all">
+      <div class="flex flex-col space-y-2.5 text-xs font-medium">
+        <a href="#" class="py-1.5 text-clcBurgundy font-bold">Home</a>
+        <a href="#pillars" class="py-1.5 border-b border-gray-100">Our Three Pillars</a>
+        <a href="#examen" class="py-1.5 border-b border-gray-100">Daily Examen Tool</a>
+        <a href="#events" class="py-1.5 border-b border-gray-100">News & Events Gallery</a>
+        <a href="#excos" class="py-1.5 border-b border-gray-100">National Leadership (ExCos)</a>
+        <a href="#contact" class="py-1.5">Contact & Secretariat</a>
+        <div class="pt-2">
+          <a href="#join" class="block text-center w-full py-2.5 rounded-lg bg-clcBurgundy text-white font-semibold">Join A Local Community</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== IMAGE GALLERY CAROUSEL (RELATIVE ADDRESSES) ==================== -->
+  <!-- Directly below navbar, configured with relative addresses -->
+  <section class="relative w-full bg-clcDarkSlate overflow-hidden select-none">
+    <div id="clcSlider" class="relative w-full h-[320px] sm:h-[420px] md:h-[480px]">
+
+      <!-- Slide 1 -->
+      <div class="slide-item absolute inset-0 opacity-100 z-10">
+        <!-- Relative Address: assets/img/slider/slide-1.jpg -->
+        <img 
+          src="photo_2026-10-20_00-47-49.jpg" 
+          alt="CLC Ethiopia Assembly and Fellowship" 
+          class="w-full h-full object-cover"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1800&q=80';"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/70"></div>
+        <div class="absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-6 sm:px-12 w-full">
+            <div class="max-w-2xl mx-auto text-center text-white">
+              <span class="inline-block px-3 py-1 rounded-full bg-clcGold/90 text-clcCharcoal text-[11px] font-bold uppercase tracking-wider mb-3">
+                CVX Community Life
+              </span>
+              <h2 class="font-serif text-2xl sm:text-4xl font-bold leading-tight mb-2">
+                United in One Mind and Heart
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-200 line-clamp-2 sm:line-clamp-3 mb-5 leading-relaxed mx-auto">
+                Small Christian communities gathered across Ethiopia to share life, discern vocations, and witness Christ in ordinary daily moments.
+              </p>
+              <a href="#join" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-clcBurgundy text-white text-xs font-semibold hover:brightness-110 transition">
+                <span>Explore Communities</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide-item absolute inset-0 opacity-0 z-0">
+        <!-- Relative Address: assets/img/slider/slide-2.jpg -->
+        <img 
+          src="images\photo_2026-08-08_10-00-50.jpg" 
+          alt="Ignatian Silent Retreat" 
+          class="w-full h-full object-cover"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1800&q=80';"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/70"></div>
+        <div class="absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-6 sm:px-12 w-full">
+            <div class="max-w-2xl mx-auto text-center text-white">
+              <span class="inline-block px-3 py-1 rounded-full bg-clcBurgundy text-white text-[11px] font-bold uppercase tracking-wider mb-3">
+                Spiritual Exercises
+              </span>
+              <h2 class="font-serif text-2xl sm:text-4xl font-bold leading-tight mb-2">
+                Silence, Discernment & Interior Peace
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-200 line-clamp-2 sm:line-clamp-3 mb-5 leading-relaxed mx-auto">
+                Experience 3-day and 8-day guided retreats rooted in the centuries-old spiritual heritage of Saint Ignatius of Loyola.
+              </p>
+              <a href="#examen" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-clcGold text-clcCharcoal text-xs font-semibold hover:brightness-110 transition">
+                <span>Discover Ignatian Prayer</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide-item absolute inset-0 opacity-0 z-0">
+        <!-- Relative Address: assets/img/slider/slide-3.jpg -->
+        <img 
+          src="images\photo_2026-08-08_09-59-10.jpg" 
+          alt="Youth & Apostolic Service" 
+          class="w-full h-full object-cover"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1800&q=80';"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/70"></div>
+        <div class="absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-6 sm:px-12 w-full">
+            <div class="max-w-2xl mx-auto text-center text-white">
+              <span class="inline-block px-3 py-1 rounded-full bg-clcEmerald text-white text-[11px] font-bold uppercase tracking-wider mb-3">
+                Apostolic Mission
+              </span>
+              <h2 class="font-serif text-2xl sm:text-4xl font-bold leading-tight mb-2">
+                Youth Formation & Social Solidarity
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-200 line-clamp-2 sm:line-clamp-3 mb-5 leading-relaxed mx-auto">
+                Empowering university students and young professionals across Ethiopian dioceses to be leaders of reconciliation and charity.
+              </p>
+              <a href="#events" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-clcCharcoal text-xs font-semibold hover:bg-gray-100 transition">
+                <span>View Event Gallery</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel Controls -->
+    <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-clcBurgundy text-white flex items-center justify-center backdrop-blur-sm transition border border-white/20" aria-label="Previous Slide">
+      <i data-lucide="chevron-left" class="w-5 h-5"></i>
+    </button>
+    <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-clcBurgundy text-white flex items-center justify-center backdrop-blur-sm transition border border-white/20" aria-label="Next Slide">
+      <i data-lucide="chevron-right" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Slide Indicators -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-2">
+      <button onclick="goToSlide(0)" class="slider-dot w-6 h-1.5 rounded-full bg-clcGold transition-all duration-300" id="dot-0"></button>
+      <button onclick="goToSlide(1)" class="slider-dot w-2 h-1.5 rounded-full bg-white/50 hover:bg-white transition-all duration-300" id="dot-1"></button>
+      <button onclick="goToSlide(2)" class="slider-dot w-2 h-1.5 rounded-full bg-white/50 hover:bg-white transition-all duration-300" id="dot-2"></button>
+    </div>
+  </section>
+
+  <!-- ==================== CLEAN HERO CONTENT ==================== -->
+  <section class="py-8 sm:py-10 bg-clcCream border-b border-clcGold/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-clcGold/40 shadow-sm mb-6">
+        <span class="w-2 h-2 rounded-full bg-clcEmerald"></span>
+        <span class="text-[11px] uppercase font-semibold tracking-widest text-clcBurgundy" data-lang-en="Christian Life Community • Ethiopia (CVX)" data-lang-am="የክርስቲያናዊ ሕይወት ማኅበር • ኢትዮጵያ (ሲ.ኤል.ሲ)">
+          Christian Life Community • Ethiopia (CVX)
+        </span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-clcCharcoal leading-tight mb-5">
+        <span class="block text-clcBurgundy font-serif" data-lang-en="Seeking and Finding God" data-lang-am="በሁሉ ነገር እግዚአብሔርን">
+          Seeking and Finding God
+        </span>
+        <span class="font-light italic font-serif text-clcCharcoal" data-lang-en="in Everything" data-lang-am="መፈለግና ማግኘት">
+          in Everything
+        </span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-clcCharcoal/80 leading-relaxed font-normal mb-8" data-lang-en="A path of deep prayer, authentic small-group fellowship, and active apostolic service rooted in Ignatian spirituality and Ethiopian Catholic ecclesial life." data-lang-am="በቅዱስ ኢግናሲዮስ ሎዮላ መንፈሳዊነት እና በኢትዮጵያ ካቶሊካዊት ቤተክርስቲያን እቅፍ የተመሰረተ፤ የጥልቅ ጸሎት፣ የእውነተኛ የወንድማማችነት ኅብረት እና የማኅበራዊ ተልዕኮ መንገድ።">
+        A path of deep prayer, authentic small-group fellowship, and active apostolic service rooted in Ignatian spirituality and Ethiopian Catholic ecclesial life.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+        <a href="#join" class="w-full sm:w-auto px-6 py-3 rounded-lg burgundy-gradient text-white font-semibold text-xs tracking-wider uppercase shadow-sacred hover:brightness-110 transition flex items-center justify-center gap-2">
+          <i data-lucide="users" class="w-4 h-4 text-clcGoldLight"></i>
+          <span data-lang-en="Join a Local Community" data-lang-am="የአካባቢ ማኅበር ይቀላቀሉ">Join a Local Community</span>
+        </a>
+
+        <a href="#examen" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-white hover:bg-gray-50 text-clcBurgundy font-semibold text-xs tracking-wider uppercase border border-clcGold/40 shadow-sm transition flex items-center justify-center gap-2">
+          <i data-lucide="compass" class="w-4 h-4 text-clcGoldDark"></i>
+          <span data-lang-en="Explore Ignatian Prayer" data-lang-am="የኢግናሲያዊ ጸሎትን ይመርምሩ">Explore Ignatian Prayer</span>
+        </a>
+      </div>
+
+      <!-- Metrics -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto pt-6 border-t border-clcGold/20 text-center">
+        <div>
+          <div class="font-serif text-2xl font-bold text-clcBurgundy">9+</div>
+          <div class="text-[11px] text-gray-500 uppercase tracking-wider mt-0.5">Diocesan Hubs</div>
+        </div>
+        <div>
+          <div class="font-serif text-2xl font-bold text-clcBurgundy">150+</div>
+          <div class="text-[11px] text-gray-500 uppercase tracking-wider mt-0.5">Active Companions</div>
+        </div>
+        <div>
+          <div class="font-serif text-2xl font-bold text-clcBurgundy">20+</div>
+          <div class="text-[11px] text-gray-500 uppercase tracking-wider mt-0.5">Years of CVX World</div>
+        </div>
+        <div>
+          <div class="font-serif text-2xl font-bold text-clcBurgundy">100%</div>
+          <div class="text-[11px] text-gray-500 uppercase tracking-wider mt-0.5">Lay-Led Apostolic Work</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== THREE PILLARS ==================== -->
+  <section id="pillars" class="py-8 sm:py-10 bg-clcWarmWhite">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-semibold tracking-widest uppercase text-clcBurgundy">The Core Triad</span>
+        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-clcCharcoal mt-1 mb-3">
+          Our Three Foundational Pillars
+        </h2>
+        <div class="w-12 h-0.5 bg-clcGold mx-auto mb-3"></div>
+        <p class="text-xs sm:text-sm text-gray-600">
+          The three inseparable dimensions that shape every CLC member's life and vocation worldwide.
+        </p>
+      </div>
+
+      <!-- 3D Pillar Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="tilt-card bg-white rounded-xl p-7 border border-clcGold/20 shadow-card-3d">
+          <div class="w-12 h-12 rounded-xl burgundy-gradient flex items-center justify-center text-clcGoldLight mb-5 shadow-sm">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-bold text-clcGoldDark">Pillar One</span>
+          <h3 class="font-serif text-xl font-bold text-clcCharcoal mt-1 mb-2">Spirituality</h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-5">
+            Rooted in the Spiritual Exercises of St. Ignatius. Daily Examen, interior freedom, and personal discernment to find God in all realities.
+          </p>
+          <ul class="text-xs text-gray-500 space-y-2 border-t border-gray-100 pt-4">
+            <li class="flex items-center gap-2"><i data-lucide="arrow-right" class="w-3 h-3 text-clcGold"></i> Daily Examen Reflection</li>
+            <li class="flex items-center gap-2"><i data-lucide="arrow-right" class="w-3 h-3 text-clcGold"></i> 3-Day & 8-Day Silent Retreats</li>
+            <li class="flex items-center gap-2"><i data-lucide="arrow-right" class="w-3 h-3 text-clcGold"></i> Guided Spiritual Direction</li>
+          </ul>
+          <button type="button" data-readmore="pillar" data-pillar="spirituality" class="mt-5 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md border border-clcBurgundy/30 text-[11px] font-bold uppercase tracking-wider text-clcBurgundy hover:bg-clcBurgundy hover:text-white transition">Read More <i data-lucide="arrow-right" class="w-3 h-3"></i></button>
+        </div>
+
+        <div class="tilt-card bg-white rounded-xl p-7 border border-clcGold/20 shadow-card-3d">
+          <div class="w-12 h-12 rounded-xl bg-clcCharcoal flex items-center justify-center text-clcGoldLight mb-5 shadow-sm">
+            <i data-lucide="users-2" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-bold text-clcGoldDark">Pillar Two</span>
+          <h3 class="font-serif text-xl font-bold text-clcCharcoal mt-1 mb-2">Community</h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-5">
+            Small Christian communities (6 to 12 companions) meeting regularly. A confidential harbor where faith and life are shared without judgment.
+          </p>
+          <ul class="text-xs text-gray-500 space-y-2 border-t border-gray-100 pt-4">
+            <li class="flex items-center gap-2"><i data-lucide="arrow-right" class="w-3 h-3 text-clcGold"></i> Regular Group Discernment</li>
+            <li class="flex items-center gap-2"><i data-lucide="arrow-right" class="w-3 h-3 text-clcGold"></i> Mutual Fraternal Support</li>
+            <li class="flex items-center gap-2"><i data-lucide="arrow-right" class="w-3 h-3 text-clcGold"></i> Diocesan & National Gatherings</li>
+          </ul>
+          <button type="button" data-readmore="pillar" data-pillar="community" class="mt-5 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md border border-clcBurgundy/30 text-[11px] font-bold uppercase tracking-wider text-clcBurgundy hover:bg-clcBurgundy hover:text-white transition">Read More <i data-lucide="arrow-right" class="w-3 h-3"></i></button>
+        </div>
+
+        <div class="tilt-card bg-white rounded-xl p-7 border border-clcGold/20 shadow-card-3d">
+          <div class="w-12 h-12 rounded-xl bg-clcEmerald flex items-center justify-center text-clcGoldLight mb-5 shadow-sm">
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-bold text-clcGoldDark">Pillar Three</span>
+          <h3 class="font-serif text-xl font-bold text-clcCharcoal mt-1 mb-2">Mission</h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-5">
+            Faith expressed in solidarity. We serve at apostolic frontiers: youth mentoring, chaplaincy support, and active care for the vulnerable.
+          </p>
+          <ul class="text-xs text-gray-500 space-y-2 border-t border-gray-100 pt-4">
+            <li class="flex items-center gap-2"><i data-lucide="arrow-right" class="w-3 h-3 text-clcGold"></i> Solidarity with the Vulnerable</li>
+            <li class="flex items-center gap-2"><i data-lucide="arrow-right" class="w-3 h-3 text-clcGold"></i> Integral Ecology Initiatives</li>
+            <li class="flex items-center gap-2"><i data-lucide="arrow-right" class="w-3 h-3 text-clcGold"></i> Youth Leadership Formation</li>
+          </ul>
+          <button type="button" data-readmore="pillar" data-pillar="mission" class="mt-5 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md border border-clcBurgundy/30 text-[11px] font-bold uppercase tracking-wider text-clcBurgundy hover:bg-clcBurgundy hover:text-white transition">Read More <i data-lucide="arrow-right" class="w-3 h-3"></i></button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== DAILY EXAMEN TOOL ==================== -->
+  <section id="examen" class="py-8 sm:py-10 bg-clcDarkSlate text-white relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-widest uppercase text-clcGoldLight">
+          <i data-lucide="sun-medium" class="w-3.5 h-3.5"></i>
+          <span>Spiritual Tool of Saint Ignatius</span>
+        </span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold mt-1 text-white">
+          The Daily Examen (ዕለታዊ የህሊና ምርመራ)
+        </h2>
+        <p class="text-gray-400 text-xs sm:text-sm mt-2">
+          Take 5 minutes of stillness. Follow these steps to review how God moved in your day.
+        </p>
+      </div>
+
+      <div class="bg-[#1F2329] border border-clcGold/30 rounded-xl p-6 sm:p-8 shadow-xl">
+        
+        <div class="grid grid-cols-5 gap-1.5 pb-6 border-b border-gray-800 text-center">
+          <button onclick="setExamenStep(0)" class="step-btn py-1.5 text-[11px] font-semibold rounded bg-clcBurgundy text-clcGoldLight" id="step-btn-0">
+            1. Thanks
+          </button>
+          <button onclick="setExamenStep(1)" class="step-btn py-1.5 text-[11px] font-semibold rounded bg-gray-800 text-gray-400 hover:text-white" id="step-btn-1">
+            2. Light
+          </button>
+          <button onclick="setExamenStep(2)" class="step-btn py-1.5 text-[11px] font-semibold rounded bg-gray-800 text-gray-400 hover:text-white" id="step-btn-2">
+            3. Review
+          </button>
+          <button onclick="setExamenStep(3)" class="step-btn py-1.5 text-[11px] font-semibold rounded bg-gray-800 text-gray-400 hover:text-white" id="step-btn-3">
+            4. Reconcile
+          </button>
+          <button onclick="setExamenStep(4)" class="step-btn py-1.5 text-[11px] font-semibold rounded bg-gray-800 text-gray-400 hover:text-white" id="step-btn-4">
+            5. Hope
+          </button>
+        </div>
+
+        <div class="py-8 min-h-[180px] flex flex-col justify-center text-center max-w-lg mx-auto">
+          <span id="examenStepSub" class="text-[10px] uppercase tracking-widest text-clcGold">Step 1 of 5 • ምስጋና</span>
+          <h3 id="examenStepTitle" class="font-serif text-xl sm:text-2xl font-bold text-white mt-1 mb-3">
+            Place yourself in God’s presence. Give thanks for God’s great love for you. 
+          </h3>
+          <p id="examenStepDesc" class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+            Begin by recalling the small blessings of today: the breath in your lungs, a kind word received, a meal shared, or moments of peace. Let gratitude fill your heart.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-between pt-5 border-t border-gray-800">
+          <button onclick="prevExamenStep()" class="px-4 py-2 rounded border border-gray-700 text-xs hover:bg-gray-800 transition flex items-center gap-1.5">
+            <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i> Previous
+          </button>
+
+          <span class="text-[11px] text-gray-400 hidden sm:inline">
+            Pause • Breathe • Contemplate
+          </span>
+
+          <button onclick="nextExamenStep()" class="px-4 py-2 rounded bg-clcGold text-clcCharcoal text-xs font-bold hover:bg-clcGoldLight transition flex items-center gap-1.5">
+            Next Step <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== NEWS & EVENTS WITH PHOTO GALLERY ==================== -->
+  <section id="events" class="py-8 sm:py-10 bg-white border-b border-clcGold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col items-center text-center mb-8">
+        <div>
+          <span class="text-xs font-semibold tracking-widest uppercase text-clcBurgundy">Recent Gatherings & Recaps in Our Communities</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-clcCharcoal mt-0.5">News & Events Photo Gallery</h2>
+          <p class="text-xs text-gray-500 mt-1">Snapshots of retreats, apostolic works, national and Local gatherings across Ethiopia.</p>
+        </div>
+
+        <!-- Filter Buttons for Events Gallery -->
+        <div class="mt-4 flex flex-wrap justify-center gap-1.5 text-[11px]">
+          <button onclick="filterGallery('all')" class="gallery-filter-btn px-3 py-1 rounded-full bg-clcBurgundy text-white font-medium" data-filter="all">All Photos</button>
+          <button onclick="filterGallery('assemblies')" class="gallery-filter-btn px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium" data-filter="assemblies">Assemblies</button>
+          <button onclick="filterGallery('retreats')" class="gallery-filter-btn px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium" data-filter="retreats">Retreats</button>
+          <button onclick="filterGallery('youth')" class="gallery-filter-btn px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium" data-filter="youth">Youth & Action</button>
+        </div>
+      </div>
+
+      <!-- Events Photo Gallery Grid (Relative Addresses) -->
+      <div id="newsGrid" data-filter="all" class="news-collapsed grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+        <p class="col-span-full text-center text-sm text-gray-500">Loading news…</p>
+      </div>
+      <div class="text-center mb-12">
+        <button type="button" id="newsMoreBtn" class="hidden px-5 py-2 rounded-full border border-clcBurgundy text-clcBurgundy text-xs font-bold uppercase tracking-wider hover:bg-clcBurgundy hover:text-white transition">View older news</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== NATIONAL SECRETARIAT & EXCOS CONTACT SECTION ==================== -->
+  <section id="contact" class="py-8 sm:py-10 bg-clcWarmWhite relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-clcCharcoal mt-1 mb-2">
+          Contact Us & National Leadership
+        </h2>
+        <div class="w-12 h-0.5 bg-clcGold mx-auto mb-3"></div>
+        <p class="text-xs sm:text-sm text-gray-600">
+          Reach out to the National Secretariat of CLC Ethiopia or connect directly with our Executive Council (ExCos).
+        </p>
+      </div>
+
+      <!-- Part 1: National Secretariat Address Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-start">
+        
+        <!-- Left: Office Location & Official Details -->
+        <div class="lg:col-span-5 bg-white rounded-xl p-8 border border-clcGold/30 shadow-card-3d">
+          <div class="flex items-center gap-3 pb-6 border-b border-gray-100">
+            <div class="w-10 h-10 rounded-full burgundy-gradient flex items-center justify-center text-clcGoldLight font-serif font-bold text-sm">
+              ✝
+            </div>
+            <div>
+              <h3 class="font-serif font-bold text-base text-clcCharcoal">National Secretariat Office</h3>
+              <p class="text-[10px] uppercase tracking-wider text-clcGoldDark font-semibold">CLC Ethiopia • CVX</p>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-6 text-xs text-gray-600">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-clcBurgundy shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-clcCharcoal block">Physical Address:</strong>
+                <span> Ethiopian Catholic Secretariat - Addis Ababa, Ethiopia</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="mail" class="w-4 h-4 text-clcBurgundy shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-clcCharcoal block">Official Email:</strong>
+                <a href="mailto:secretariat@clc-ethiopia.org" class="text-clcBurgundy hover:underline">zakantewan@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="phone" class="w-4 h-4 text-clcBurgundy shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-clcCharcoal block">Telephone:</strong>
+                <span>+251 -- --- ---- / +251 -- --- ----</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="clock" class="w-4 h-4 text-clcBurgundy shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-clcCharcoal block">Office Hours:</strong>
+                <span>Monday – Friday: 8:30 AM – 5:30 PM (EAT)<br />Saturday: By Appointment for Cell Leaders</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-4 h-4 text-clcBurgundy shrink-0 mt-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              <div>
+                <strong class="text-clcCharcoal block">Telegram Channel:</strong>
+                <a href="https://t.me/CLCEthiopiaOfficial" target="_blank" class="text-clcBurgundy hover:underline">@clcethiopia</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-4 h-4 text-clcBurgundy shrink-0 mt-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <div>
+                <strong class="text-clcCharcoal block">Official Facebook Page:</strong>
+                <a href="https://facebook.com/groups/CLCEthiopia/" target="_blank" rel="noopener" class="text-clcBurgundy hover:underline">CLC Ethiopia on Facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Confidential Prayer Intentions & Secretariat Inquiry Form -->
+        <div class="lg:col-span-7 bg-white rounded-xl p-8 border border-clcGold/30 shadow-card-3d">
+          <h3 class="font-serif font-bold text-lg text-clcCharcoal mb-1">Submit Prayer Request or Inquire</h3>
+          <p class="text-xs text-gray-500 mb-5">Your intentions will be remembered in the intercessions of CLC communities across the nation.</p>
+
+          <form onsubmit="handleContactSubmit(event)" class="space-y-3.5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label class="block text-xs font-semibold text-clcCharcoal mb-1">Your Name</label>
+                <input type="text" required placeholder="Full Name" class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-xs focus:border-clcBurgundy focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-clcCharcoal mb-1">Email / Phone</label>
+                <input type="text" required placeholder="Email or Phone Number" class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-xs focus:border-clcBurgundy focus:outline-none" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-clcCharcoal mb-1">Subject</label>
+              <select class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-xs focus:border-clcBurgundy focus:outline-none bg-white">
+                <option value="prayer">Prayer Intention (Confidential)</option>
+                <option value="secretariat">General Inquiry to Secretariat</option>
+                <option value="retreat">Retreat / Formation Inquiry</option>
+                <option value="diaspora">Diaspora Fellowship Connection</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-clcCharcoal mb-1">Message / Intention</label>
+              <textarea rows="3" required placeholder="Write your message or prayer intention here..." class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-xs focus:border-clcBurgundy focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit" class="px-6 py-2.5 rounded-lg burgundy-gradient text-white text-xs font-bold uppercase tracking-wider hover:brightness-110 transition shadow-sm">
+              Send Message
+            </button>
+            <p id="contactFeedback" class="hidden text-xs font-semibold text-clcEmerald mt-2">
+              ✓ Ameseginalehu! Your message has been received by the National Secretariat.
+            </p>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Part 2: National Executive Council (ExCos) Directory -->
+      <div id="excos" class="pt-6">
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="text-xs font-semibold tracking-widest uppercase text-clcBurgundy">Ethiopian National Coordinators</span>
+          <h3 class="font-serif text-2xl font-bold text-clcCharcoal mt-0.5">National Executive Council (ExCos) and Our Ecclesiastical Assistant</h3>
+          <p class="text-xs text-gray-500 mt-1">Serving the mission, formation, and spiritual communion of CLC in Ethiopia.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- ExCo 1: President -->
+          <div class="bg-white rounded-xl p-5 border border-clcGold/20 shadow-sm text-center">
+            <div class="w-24 h-24 rounded-full mx-auto mb-3 exco-photo bg-clcBurgundy/10 text-clcBurgundy font-serif font-bold text-xl flex items-center justify-center border border-clcBurgundy/20 ring-2 ring-clcGold/40 ring-offset-2 ring-offset-white shadow-md">
+              PR
+              <img src="excos/shimelis-biratu.jpg" alt="Shimelis Biratu" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+            <h4 class="font-serif font-bold text-sm text-clcCharcoal">National Coordinator</h4>
+            <p class="text-[10px] text-clcGoldDark font-semibold uppercase tracking-wider font-ethiopic">Shimelis Biratu</p>
+            <p class="text-xs text-gray-500 mt-2">General leadership, communion with CVX World, and national coordination.</p>
+            <div class="mt-3 pt-3 border-t border-gray-100 text-[11px] text-gray-400">
+              president@clc-ethiopia.org
+            </div>
+          </div>
+
+          <!-- ExCo 2: Vice President / Apostolic Action -->
+          <div class="bg-white rounded-xl p-5 border border-clcGold/20 shadow-sm text-center">
+            <div class="w-24 h-24 rounded-full mx-auto mb-3 exco-photo bg-clcEmerald/10 text-clcEmerald font-serif font-bold text-xl flex items-center justify-center border border-clcEmerald/20 ring-2 ring-clcGold/40 ring-offset-2 ring-offset-white shadow-md">
+              VP
+              <img src="excos/dawit-getu-kebede.jpg" alt="Dawit Getu Kebede" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+            <h4 class="font-serif font-bold text-sm text-clcCharcoal">Vice Coordinator</h4>
+            <p class="text-[10px] text-clcGoldDark font-semibold uppercase tracking-wider font-ethiopic">Dawit Getu Kebede</p>
+            <p class="text-xs text-gray-500 mt-2">Apostolic frontiers, social solidarity, and diocesan cluster liaison.</p>
+            <div class="mt-3 pt-3 border-t border-gray-100 text-[11px] text-gray-400">
+              mission@clc-ethiopia.org
+            </div>
+          </div>
+
+          <!-- ExCo 3: Secretary & Formation -->
+          <div class="bg-white rounded-xl p-5 border border-clcGold/20 shadow-sm text-center">
+            <div class="w-24 h-24 rounded-full mx-auto mb-3 exco-photo bg-clcGold/20 text-clcGoldDark font-serif font-bold text-xl flex items-center justify-center border border-clcGold/30 ring-2 ring-clcGold/40 ring-offset-2 ring-offset-white shadow-md">
+              SEC
+              <img src="excos/muluken-tamiru.jpg" alt="Muluken Tamiru" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+            <h4 class="font-serif font-bold text-sm text-clcCharcoal">National Secretary</h4>
+            <p class="text-[10px] text-clcGoldDark font-semibold uppercase tracking-wider font-ethiopic">Muluken Tamiru</p>
+            <p class="text-xs text-gray-500 mt-2">Formation guidelines, meeting documentation, and member communications.</p>
+            <div class="mt-3 pt-3 border-t border-gray-100 text-[11px] text-gray-400">
+              secretary@clc-ethiopia.org
+            </div>
+          </div>
+
+          <!-- ExCo 4: Ecclesiastical Assistant -->
+          <div class="bg-white rounded-xl p-5 border border-clcGold/20 shadow-sm text-center">
+            <div class="w-24 h-24 rounded-full mx-auto mb-3 exco-photo burgundy-gradient text-white font-serif font-bold text-xl flex items-center justify-center shadow-sm ring-2 ring-clcGold/40 ring-offset-2 ring-offset-white shadow-md">
+              ✝
+              <img src="excos/abba-ray.jpg" alt="Abba Ray (Jesuit SJ)" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+            <h4 class="font-serif font-bold text-sm text-clcCharcoal">Ecclesiastical Assistant</h4>
+            <p class="text-[10px] text-clcGoldDark font-semibold uppercase tracking-wider font-ethiopic">Abba Ray (Jesuit SJ)</p>
+            <p class="text-xs text-gray-500 mt-2">Ignatian charism alignment, spiritual direction, and pastoral communion.</p>
+            <div class="mt-3 pt-3 border-t border-gray-100 text-[11px] text-gray-400">
+              ea@clc-ethiopia.org
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== JOIN INQUIRY MODAL / HUB SELECTOR ==================== -->
+  <section id="join" class="py-8 sm:py-10 bg-white border-t border-clcGold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-clcCharcoal">
+            Join a Small Christian Community Cell
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+            Ready to experience regular prayer in a small circle of 6 to 12 companions? Connect with active groups in Addis Ababa, Hawassa, Dilla, Jimma, Sodo, Hossanna, and regional clusters.
+          </p>
+
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 rounded bg-clcWarmWhite border border-clcGold/30 text-[11px] font-medium text-clcCharcoal">Addis Ababa</span>
+            <span class="px-2.5 py-1 rounded bg-clcWarmWhite border border-clcGold/30 text-[11px] font-medium text-clcCharcoal">Hawassa</span>
+            <span class="px-2.5 py-1 rounded bg-clcWarmWhite border border-clcGold/30 text-[11px] font-medium text-clcCharcoal">Dilla</span>
+            <span class="px-2.5 py-1 rounded bg-clcWarmWhite border border-clcGold/30 text-[11px] font-medium text-clcCharcoal">Jimma</span>
+            <span class="px-2.5 py-1 rounded bg-clcWarmWhite border border-clcGold/30 text-[11px] font-medium text-clcCharcoal">Sodo</span>
+            <span class="px-2.5 py-1 rounded bg-clcWarmWhite border border-clcGold/30 text-[11px] font-medium text-clcCharcoal">Hossanna</span>
+            <span class="px-2.5 py-1 rounded bg-clcWarmWhite border border-clcGold/30 text-[11px] font-medium text-clcCharcoal">Emdibir</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-clcWarmWhite rounded-xl p-6 sm:p-8 border border-clcGold/30 shadow-sm">
+          <h3 class="font-serif text-lg font-bold text-clcCharcoal mb-1">Membership / Inquiry Form</h3>
+          <p class="text-xs text-gray-500 mb-4">Our national formation team will connect you with a cell leader in your parish or university.</p>
+
+          <form id="joinForm" onsubmit="handleJoinSubmit(event)" class="space-y-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-clcCharcoal mb-1">Full Name *</label>
+                <input type="text" required placeholder="Abebe Balcha" class="w-full px-3 py-2 rounded-lg border border-gray-300 text-xs focus:border-clcBurgundy focus:outline-none bg-white" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-clcCharcoal mb-1">Phone / Telegram *</label>
+                <input type="tel" required placeholder="+251 9..." class="w-full px-3 py-2 rounded-lg border border-gray-300 text-xs focus:border-clcBurgundy focus:outline-none bg-white" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-clcCharcoal mb-1">Email</label>
+                <input type="email" placeholder="example@gmail.com" class="w-full px-3 py-2 rounded-lg border border-gray-300 text-xs focus:border-clcBurgundy focus:outline-none bg-white" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-clcCharcoal mb-1">Preferred Location *</label>
+                <select class="w-full px-3 py-2 rounded-lg border border-gray-300 text-xs focus:border-clcBurgundy focus:outline-none bg-white">
+                  <option value="addis">Addis Ababa</option>
+                  <option value="hawassa">Hawassa</option>
+                  <option value="dilla">Dilla</option>
+                  <option value="jimma">Jimma</option>
+                  <option value="sodo">Sodo</option>
+                  <option value="hossanna">Hossanna</option>
+                
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="w-full py-2.5 rounded-lg burgundy-gradient text-white text-xs font-bold uppercase tracking-wider hover:brightness-110 transition shadow-sm">
+              Submit Inquiry
+            </button>
+            <p id="joinFeedback" class="hidden text-xs text-center font-semibold text-clcEmerald mt-1">
+              ✓ Ameseginalehu! Your inquiry has been forwarded to the local coordinator.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-clcCharcoal text-white pt-14 pb-10 border-t-2 border-clcGold">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-gray-800 text-xs">
+        
+        <div class="lg:col-span-2 space-y-3">
+          <div class="flex items-center gap-3">
+            <img 
+              src="photo_2023-09-21_01-53-10.jpg" 
+              alt="Christian Life Community Ethiopia" 
+              class="w-9 h-9 object-contain rounded-full"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=100&q=80';"
+            />
+            <div>
+              <span class="font-serif font-bold text-base text-white">CLC ETHIOPIA</span>
+              <p class="text-[9px] text-clcGold tracking-wider uppercase font-semibold font-ethiopic">የክርስቲያናዊ ሕይወት ማኅበር • CVX</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+            Part of the World Christian Life Community (CVX-CLC) headquartered in Rome, affiliated with the Society of Jesus (Jesuits) and the Catholic Church in Ethiopia.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-xs font-bold text-clcGoldLight uppercase tracking-wider mb-3">Links</h4>
+          <ul class="text-gray-400 space-y-2">
+            <li><a href="#" class="hover:text-white transition">Charism</a></li>
+            <li><a href="#pillars" class="hover:text-white transition">The 3 Pillars</a></li>
+            <li><a href="#examen" class="hover:text-white transition">Daily Examen</a></li>
+            <li><a href="#events" class="hover:text-white transition">Events Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-xs font-bold text-clcGoldLight uppercase tracking-wider mb-3">National ExCos</h4>
+          <ul class="text-gray-400 space-y-2">
+            <li><a href="#excos" class="hover:text-white transition">National Coordinator</a></li>
+            <li><a href="#excos" class="hover:text-white transition">Vice Coordinator</a></li>
+            <li><a href="#excos" class="hover:text-white transition">National Secretary</a></li>
+            <li><a href="#excos" class="hover:text-white transition">Ecclesiastical Assistant</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-xs font-bold text-clcGoldLight uppercase tracking-wider mb-3">Secretariat</h4>
+          <ul class="text-gray-400 space-y-2">
+            <li class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-clcGold shrink-0"></i>
+              <span>Addis Ababa, Ethiopia</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-clcGold shrink-0"></i>
+              <span>secretariat@clc-ethiopia.org</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-clcGold shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              <a href="https://t.me/CLCEthiopiaOfficial" target="_blank" rel="noopener" class="hover:text-white transition">Telegram: @clcethiopia</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-clcGold shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <a href="https://facebook.com/groups/CLCEthiopia/" target="_blank" rel="noopener" class="hover:text-white transition">Facebook: CLC Ethiopia</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 gap-3">
+        <div>
+          © 2026 Ethiopian Christian Life Community (የክርስቲያናዊ ሕይወት ማኅበር - ኢትዮጵያ).
+        </div>
+        <div class="flex items-center gap-3">
+          <span>Ad Maiorem Dei Gloriam (AMDG)</span>
+          <span>•</span>
+          <a href="https://cvx-clc.net" target="_blank" class="hover:text-gray-300">CVX World Rome</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // ==================== 1. IMAGE CAROUSEL SLIDER ====================
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+    const dots = document.querySelectorAll('.slider-dot');
+    let sliderInterval;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove('opacity-0', 'z-0');
+          slide.classList.add('opacity-100', 'z-10');
+          dots[i].className = 'slider-dot w-6 h-1.5 rounded-full bg-clcGold transition-all duration-300';
+        } else {
+          slide.classList.remove('opacity-100', 'z-10');
+          slide.classList.add('opacity-0', 'z-0');
+          dots[i].className = 'slider-dot w-2 h-1.5 rounded-full bg-white/50 hover:bg-white transition-all duration-300';
+        }
+      });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentSlide + 1) % slides.length;
+      showSlide(nextIndex);
+    }
+
+    function prevSlide() {
+      const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prevIndex);
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+      resetAutoPlay();
+    }
+
+    function startAutoPlay() {
+      sliderInterval = setInterval(nextSlide, 6000);
+    }
+
+    function resetAutoPlay() {
+      clearInterval(sliderInterval);
+      startAutoPlay();
+    }
+
+    startAutoPlay();
+
+    // ==================== 2. GALLERY FILTER (NEWS & EVENTS) ====================
+    function filterGallery(category) {
+      const cards = document.querySelectorAll('.gallery-card');
+      const buttons = document.querySelectorAll('.gallery-filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.className = 'gallery-filter-btn px-3 py-1 rounded-full bg-clcBurgundy text-white font-medium';
+        } else {
+          btn.className = 'gallery-filter-btn px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium';
+        }
+      });
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // ==================== 3. DAILY EXAMEN TOOL ====================
+    const examenSteps = [
+      {
+        sub: "Step 1 of 5 • ምስጋና",
+        title: "Place yourself in God’s presence. Give thanks for God’s great love for you.",
+        desc: "Begin by recalling the small blessings of today: the breath in your lungs, a kind word received, a meal shared, or moments of peace. Let gratitude fill your heart."
+      },
+      {
+        sub: "Step 2 of 5 • ብርሃን መለመን",
+        title: "Pray for the grace to understand how God is acting in your life.",
+        desc: "Ask the Holy Spirit for the light to look at your day not with harsh self-judgment, but through the compassionate, truthful eyes of Christ."
+      },
+      {
+        sub: "Step 3 of 5 • የቀኑን ጉዞ መመርመር",
+        title: "Review your day - recall specific moments and your feelings at the time. ",
+        desc: "Recall the sequence of your day from morning until now. Where did you experience consolation, faith, and love? Where did you feel restless or drawn toward selfishness?"
+      },
+      {
+        sub: "Step 4 of 5 • ይቅርታና እርቅ",
+        title: "Reflect on what you did, said, or thought in those instances. Were you drawing closer to God, or further away? ",
+        desc: "Acknowledge moments where you fell short in love or patience toward family, colleagues, or strangers. Rest in God’s unfailing mercy and receive His pardon."
+      },
+      {
+        sub: "Step 5 of 5 • ለነገ ተስፋና ውሳኔ",
+        title: "Look toward tomorrow - think of how you might collaborate more effectively with God’s plan.",
+        desc: "Bring tomorrow’s tasks and encounters before the Lord. Ask for the specific grace you need: courage, patience, kindness, or wisdom. Close with the Lord's Prayer."
+      }
+    ];
+
+    let currentStep = 0;
+
+    function renderExamenStep() {
+      const step = examenSteps[currentStep];
+      document.getElementById('examenStepSub').innerText = step.sub;
+      document.getElementById('examenStepTitle').innerText = step.title;
+      document.getElementById('examenStepDesc').innerText = step.desc;
+
+      for (let i = 0; i < 5; i++) {
+        const btn = document.getElementById(`step-btn-${i}`);
+        if (i === currentStep) {
+          btn.className = "step-btn py-1.5 text-[11px] font-semibold rounded bg-clcBurgundy text-clcGoldLight shadow-sm";
+        } else {
+          btn.className = "step-btn py-1.5 text-[11px] font-semibold rounded bg-gray-800 text-gray-400 hover:text-white";
+        }
+      }
+    }
+
+    function setExamenStep(index) {
+      currentStep = index;
+      renderExamenStep();
+    }
+
+    function nextExamenStep() {
+      currentStep = (currentStep + 1) % 5;
+      renderExamenStep();
+    }
+
+    function prevExamenStep() {
+      currentStep = (currentStep - 1 + 5) % 5;
+      renderExamenStep();
+    }
+
+    // ==================== 4. BILINGUAL LANGUAGE SWITCHER ====================
+    let isAmharic = false;
+
+    function toggleLanguage() {
+      isAmharic = !isAmharic;
+      
+      const langLabel = document.getElementById('currentLangLabel');
+      const mobileLangLabel = document.getElementById('mobileLangLabel');
+      
+      if (langLabel) langLabel.innerText = isAmharic ? 'English' : 'አማርኛ';
+      if (mobileLangLabel) mobileLangLabel.innerText = isAmharic ? 'EN' : 'አማ';
+
+      const translatableElements = document.querySelectorAll('[data-lang-en]');
+      translatableElements.forEach(el => {
+        if (isAmharic) {
+          el.innerText = el.getAttribute('data-lang-am');
+        } else {
+          el.innerText = el.getAttribute('data-lang-en');
+        }
+      });
+    }
+
+    // ==================== 5. FORM HANDLERS ====================
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const feedback = document.getElementById('contactFeedback');
+      feedback.classList.remove('hidden');
+      event.target.reset();
+      setTimeout(() => feedback.classList.add('hidden'), 6000);
+    }
+
+    function handleJoinSubmit(event) {
+      event.preventDefault();
+      const feedback = document.getElementById('joinFeedback');
+      feedback.classList.remove('hidden');
+      event.target.reset();
+      setTimeout(() => feedback.classList.add('hidden'), 6000);
+    }
+  </script>
+
+  <!-- ==================== READ MORE MODAL ==================== -->
+  <div id="readModal" class="hidden fixed inset-0 z-[100] items-center justify-center p-4 bg-black/70" role="dialog" aria-modal="true" aria-labelledby="rmTitle">
+    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+      <button type="button" id="rmClose" aria-label="Close" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/90 hover:bg-clcBurgundy hover:text-white text-clcCharcoal text-xl leading-none shadow flex items-center justify-center transition">&times;</button>
+      <img id="rmImg" src="" alt="" class="hidden w-full h-56 sm:h-72 object-cover rounded-t-xl" />
+      <div id="rmIcon" class="hidden h-24 burgundy-gradient rounded-t-xl items-center justify-center text-clcGoldLight font-serif text-3xl">&#10013;</div>
+      <div class="p-6 sm:p-8">
+        <div class="flex flex-wrap items-center justify-between gap-2 text-[10px] uppercase font-bold tracking-wider mb-2">
+          <span id="rmTag" class="text-clcGoldDark"></span>
+          <span id="rmMeta" class="text-gray-400 font-normal"></span>
+        </div>
+        <h3 id="rmTitle" class="font-serif text-xl sm:text-2xl font-bold text-clcCharcoal mb-3"></h3>
+        <div class="w-12 h-0.5 bg-clcGold mb-4"></div>
+        <div id="rmBody" class="space-y-3 text-sm text-gray-600 leading-relaxed"></div>
+        <div id="rmCta" class="hidden mt-6"><a href="#join" class="inline-block px-4 py-2 rounded-lg bg-clcBurgundy text-white text-xs font-semibold hover:brightness-110 transition">Join A Local Community</a></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ===== Read More (news + pillars) =====
+    // For a longer news article, add data-full="Paragraph one||Paragraph two" to that card's gallery-card div.
+    (function () {
+      var PILLARS = {
+        spirituality: {
+          tag: 'Pillar One', title: 'Spirituality (መንፈሳዊነት)',
+          body: [
+            'CLC spirituality is rooted in the Spiritual Exercises of St. Ignatius of Loyola. Members are invited to make the Exercises and to let them shape an everyday way of life, finding God in all things.',
+            'The Daily Examen is the heart of this practice: a short prayerful review of the day that notices where God was present, gives thanks, and asks for light for tomorrow. Over time it builds interior freedom and the habit of discernment.',
+            'Members also take part in 3-day and 8-day silent retreats and receive guided spiritual direction, so that personal prayer stays connected to real decisions in family, work and study.'
+          ]
+        },
+        community: {
+          tag: 'Pillar Two', title: 'Community (ኅብረት)',
+          body: [
+            'CLC members gather in small communities of about 6 to 12 companions who meet regularly, weekly or every two weeks. These groups are a confidential place to share faith and life without judgment.',
+            'Each local community belongs to a larger network: regional, national and the worldwide Christian Life Community. Diocesan and national gatherings give members the chance to meet, pray and discern together beyond their own group.',
+            'Regular group discernment and mutual fraternal support help members stay faithful to their vocation and encourage one another in daily life.'
+          ]
+        },
+        mission: {
+          tag: 'Pillar Three', title: 'Mission (ተልዕኮ)',
+          body: [
+            'For CLC, prayer and community lead to mission. Ignatian spirituality has an essential apostolic dimension, and members reflect on how to bring Gospel values into every part of life.',
+            'In Ethiopia this means serving at apostolic frontiers: mentoring young people, supporting chaplaincy work and caring actively for the vulnerable, in solidarity with the poor.',
+            'Members also take part in integral ecology initiatives and youth leadership formation, integrating contemplation and action in a spirit of discernment.'
+          ]
+        }
+      };
+
+      var modal = document.getElementById('readModal');
+      var img = document.getElementById('rmImg'), icon = document.getElementById('rmIcon');
+      var tag = document.getElementById('rmTag'), meta = document.getElementById('rmMeta');
+      var ttl = document.getElementById('rmTitle'), body = document.getElementById('rmBody');
+      var cta = document.getElementById('rmCta');
+
+      function fill(paras) {
+        body.innerHTML = '';
+        paras.forEach(function (t) {
+          if (!t.trim()) return;
+          var p = document.createElement('p'); p.textContent = t.trim(); body.appendChild(p);
+        });
+      }
+      function openModal() { modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow = 'hidden'; }
+      function closeModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = ''; }
+
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-readmore]');
+        if (b) {
+          if (b.dataset.readmore === 'news') {
+            var card = b.closest('.gallery-card');
+            var spans = card.querySelectorAll('.p-4 span');
+            var pic = card.querySelector('img');
+            var full = card.getAttribute('data-full');
+            img.src = pic.currentSrc || pic.src; img.alt = pic.alt; img.classList.remove('hidden');
+            icon.classList.add('hidden'); icon.classList.remove('flex');
+            tag.textContent = spans[0] ? spans[0].textContent : '';
+            meta.textContent = spans[1] ? spans[1].textContent : '';
+            ttl.textContent = card.querySelector('h4').textContent;
+            fill(full ? full.split('||') : [card.querySelector('.p-4 p').textContent]);
+            cta.classList.add('hidden');
+          } else {
+            var d = PILLARS[b.dataset.pillar];
+            img.classList.add('hidden');
+            icon.classList.remove('hidden'); icon.classList.add('flex');
+            tag.textContent = d.tag; meta.textContent = 'CLC Ethiopia \u2022 CVX';
+            ttl.textContent = d.title; fill(d.body);
+            cta.classList.remove('hidden');
+          }
+          openModal(); return;
+        }
+        if (e.target === modal || e.target.closest('#rmClose') || e.target.closest('#rmCta a')) closeModal();
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+    })();
+  </script>
+
+  <script>
+    // ===== Navbar dropdown content (opens in the Read More modal) =====
+    (function () {
+      var INFO = {
+        charism: { tag: 'About Us', title: 'Charism & Identity', join: true, body: [
+          'The Christian Life Community (CLC, or CVX in Latin) is an international association of lay Christians, men and women, young and old, of all social conditions, who want to follow Jesus Christ more closely and work with him for the building of the Kingdom.',
+          'Its charism comes from the Spiritual Exercises of St. Ignatius of Loyola. Members seek to find God in all things, to discern in the light of the Gospel, and to be sent on mission, integrating contemplation and action in daily life.',
+          'CLC traces its roots to the Sodality of Our Lady, founded among students in 1563 at the Roman College. It took the name Christian Life Community in 1967. Today it is present in almost 60 countries, and CLC Ethiopia is part of that one world community.'
+        ]},
+        history: { tag: 'About Us', title: 'History in Ethiopia', join: false, body: [
+          'CLC is a relatively young movement in Ethiopia. It was brought here through Jesuit companions who had met the community abroad, and it first took root among young, urban and university-educated Catholics looking for community and a deeper Ignatian spirituality.',
+          'From the first small groups in Addis Ababa, the community has grown to gatherings and groups in several towns and campuses, including Debre Zeit, Hawassa and Sodo, with an annual national retreat and regular local meetings.',
+          'Dates and names in this short history are a summary. Please contact the National Secretariat for the full, official account of how CLC began in Ethiopia.'
+        ]},
+        ignatian: { tag: 'Ignatian Spirituality', title: 'What is Ignatian Spirituality?', join: false, body: [
+          'Ignatian spirituality is the way of living the Gospel taught by St. Ignatius of Loyola, founder of the Jesuits. It is built on the belief that God is at work in every part of ordinary life and can be found in all things.',
+          'Its key practices are daily prayer and the Examen, attention to our deepest desires and movements of heart, and discernment: choosing what leads to greater love and service. It is always oriented toward serving others, for the greater glory of God (Ad Maiorem Dei Gloriam).',
+          'You can try a short guided Examen in the Daily Examen Tool section of this website.'
+        ], links: [['Try the Daily Examen Tool', '#examen']] },
+        exercises: { tag: 'Ignatian Spirituality', title: 'Spiritual Exercises & Retreats', join: true, body: [
+          'The Spiritual Exercises are a structured series of meditations, contemplations and prayers designed by St. Ignatius to help a person grow in freedom and respond to God\u2019s call. Making the Exercises is of great importance for CLC members.',
+          'CLC Ethiopia offers silent retreats in the Ignatian tradition, including 3-day retreats and an annual 8-day retreat, with personal spiritual direction throughout.',
+          'Watch the News & Events section for upcoming retreats, or contact the Secretariat to ask about the next one.'
+        ], links: [['See retreats in News & Events', '#events']] },
+        library: { tag: 'Ignatian Spirituality', title: 'Digital Resource Library', join: false, body: [
+          'A growing collection of prayer and formation resources for CLC members and friends is planned for this website.',
+          'In the meantime, the Daily Examen tool on this page is ready to use, and the World Christian Life Community website offers documents, news and formation material from the worldwide community.'
+        ], links: [['Open the Daily Examen Tool', '#examen'], ['Visit the CVX World Secretariat (cvx-clc.net)', 'https://cvx-clc.net']] },
+        formation: { tag: 'What We Do', title: 'Catechism & Formation', join: true, body: [
+          'Formation is at the heart of CLC life. Members grow in faith through Scripture, prayer, the teaching of the Church and the Ignatian Exercises, and they learn to apply these to real decisions in family, work and society.',
+          'Formation happens mainly in the small community, through regular meetings, and is supported by retreats, national gatherings and guidance from the Ecclesiastical Assistant.'
+        ]},
+        youth: { tag: 'What We Do', title: 'Youth & University Ministry', join: true, body: [
+          'Young people and university students are at the heart of CLC in Ethiopia. Campus and youth groups give students a place to pray, share life and explore their vocation and Christian leadership.',
+          'Activities include youth circles such as the University Students Vocation Day, small-group faith sharing, retreats and service projects.'
+        ], links: [['See youth activities in News & Events', '#events']] },
+        family: { tag: 'What We Do', title: 'Family & Marriage Support', join: true, body: [
+          'CLC accompanies families as small domestic communities of faith. Family CLC groups bring parents, children and grandparents together for prayer, fellowship and mutual support.',
+          'The recent Addis Ababa Family CLC Gathering in our News & Events section shows how families of all generations strengthen their bonds in Christ.'
+        ], links: [['Read the Family Gathering story', '#events']] },
+        groups: { tag: 'Communities', title: 'How Small Groups Work', join: true, body: [
+          'A CLC small community is made up of about 6 to 12 companions who meet regularly, weekly or every two weeks.',
+          'A typical meeting includes prayer, a reading from Scripture, sharing of how God has been present in each person\u2019s life, and shared discernment. What is shared stays within the group.',
+          'Each group belongs to a diocesan or regional and national community, and through them to the worldwide CLC.'
+        ]},
+        hubs: { tag: 'Communities', title: 'Find Local Hubs', join: true, body: [
+          'CLC Ethiopia communities and gatherings are found in Addis Ababa and other towns and campuses, including Debre Zeit, Hawassa and Sodo.',
+          'To be put in touch with a group near you, fill in the Join A Local Community form, or contact the National Secretariat.'
+        ], links: [['Contact the Secretariat', '#contact']] },
+        voices: { tag: 'Communities', title: 'Testimonials', join: true, body: [
+          'Members\u2019 stories are the best way to see what CLC is about. Their experiences of retreats, family gatherings and youth activities are shared in the News & Events section.',
+          'Are you a CLC member with a story to share? Send it to the National Secretariat and it may be featured here.'
+        ], links: [['Read recent stories', '#events'], ['Send us your story', '#contact']] }
+      };
+
+      var modal = document.getElementById('readModal');
+      var img = document.getElementById('rmImg'), icon = document.getElementById('rmIcon');
+      var tag = document.getElementById('rmTag'), meta = document.getElementById('rmMeta');
+      var ttl = document.getElementById('rmTitle'), body = document.getElementById('rmBody');
+      var cta = document.getElementById('rmCta');
+
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a[data-readmore], a[data-info]');
+        if (!a) return;
+        e.preventDefault();
+        if (!a.hasAttribute('data-info')) return; // pillar items are handled by the Read More script
+        var d = INFO[a.getAttribute('data-info')];
+        img.classList.add('hidden');
+        icon.classList.remove('hidden'); icon.classList.add('flex');
+        tag.textContent = d.tag; meta.textContent = 'CLC Ethiopia \u2022 CVX';
+        ttl.textContent = d.title;
+        body.innerHTML = '';
+        d.body.forEach(function (t) { var p = document.createElement('p'); p.textContent = t; body.appendChild(p); });
+        (d.links || []).forEach(function (l) {
+          var p = document.createElement('p'); var x = document.createElement('a');
+          x.href = l[1]; x.textContent = l[0] + ' \u2192';
+          x.className = 'font-semibold text-clcBurgundy hover:underline';
+          if (l[1].charAt(0) !== '#') { x.target = '_blank'; x.rel = 'noopener'; } else { x.setAttribute('data-close', '1'); }
+          p.appendChild(x); body.appendChild(p);
+        });
+        cta.classList.toggle('hidden', !d.join);
+        modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow = 'hidden';
+      });
+      // close the modal when an in-page link inside it is used
+      body.addEventListener('click', function (e) {
+        if (e.target.closest('a[data-close]')) {
+          modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = '';
+        }
+      });
+    })();
+  </script>
+
+  <style>.news-collapsed[data-filter="all"] .news-older{display:none}</style>
+  <script>
+    // ===== News & Events gallery: loads data/news.json (edited via /admin) =====
+    (function () {
+      var LIMIT = 6, grid = document.getElementById('newsGrid'), moreBtn = document.getElementById('newsMoreBtn');
+      var TAGCOLOR = { assemblies: 'text-clcGoldDark', retreats: 'text-clcBurgundy', youth: 'text-clcEmerald' };
+      function esc(t) { var d = document.createElement('div'); d.textContent = t == null ? '' : String(t); return d.innerHTML; }
+      function fmt(d) { var x = new Date(d + 'T00:00:00'); return isNaN(x) ? '' : x.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); }
+      function card(it, i) {
+        var paras = String(it.text || '').split(/\n\s*\n/).map(function (p) { return p.trim(); }).filter(Boolean);
+        var meta = it.location || fmt(it.date);
+        var img = it.image ? encodeURI(it.image) : '';
+        return '<div class="gallery-card group relative rounded-xl overflow-hidden shadow-sm border border-clcGold/20 bg-clcWarmWhite' + (i >= LIMIT ? ' news-older' : '') + '" data-category="' + esc(it.category) + '" data-full="' + esc(paras.join('||')) + '">' +
+          '<div class="h-56 overflow-hidden"><img src="' + esc(img) + '" alt="' + esc(it.alt || it.title) + '" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null;this.src=\'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=700&q=80\';" /></div>' +
+          '<div class="p-4 bg-white"><div class="flex items-center justify-between text-[10px] ' + (TAGCOLOR[it.category] || 'text-clcBurgundy') + ' font-bold uppercase mb-1"><span>' + esc(it.tag) + '</span><span class="text-gray-400 font-normal">' + esc(meta) + '</span></div>' +
+          '<h4 class="font-serif font-bold text-sm text-clcCharcoal">' + esc(it.title) + '</h4>' +
+          '<p class="text-xs text-gray-500 mt-1 line-clamp-2">' + esc(paras.join(' ')) + '</p>' +
+          '<button type="button" data-readmore="news" class="mt-3 inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-clcBurgundy hover:text-clcGoldDark">Read more &rarr;</button></div></div>';
+      }
+      function updateMore() {
+        var hasOlder = grid.querySelector('.news-older');
+        moreBtn.classList.toggle('hidden', !(hasOlder && grid.classList.contains('news-collapsed') && grid.dataset.filter === 'all'));
+      }
+      fetch('data/news.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (data) {
+        var items = (data.items || []).slice().sort(function (a, b) { return String(b.date || '').localeCompare(String(a.date || '')); });
+        grid.innerHTML = items.length ? items.map(card).join('') : '<p class="col-span-full text-center text-sm text-gray-500">No news yet.</p>';
+        updateMore();
+      }).catch(function () {
+        grid.innerHTML = '<p class="col-span-full text-center text-sm text-gray-500">News could not be loaded right now. Please try again later.</p>';
+      });
+      moreBtn.addEventListener('click', function () { grid.classList.remove('news-collapsed'); updateMore(); });
+      var base = window.filterGallery;
+      window.filterGallery = function (c) { grid.dataset.filter = c; base(c); updateMore(); };
+    })();
+  </script>
+</body>
+</html>

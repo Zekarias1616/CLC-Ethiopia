@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "title": "National 8-Day Retreat",
+      "date": "2026-08-06",
+      "category": "assemblies",
+      "tag": "2018 Annual 8-Day Retreat",
+      "location": "Asko, Addis Ababa",
+      "image": "images/photo_2026-08-08_09-59-10.jpg",
+      "alt": "National CLC Ethiopia Assembly",
+      "text": "We are profoundly grateful for the graces received during our recent CLC Annual 8-Day Retreat. It was a sacred time of silent prayer, deep reflection, and personal encounter with the Lord, guided by the Ignatian Spiritual Exercises."
+    },
+    {
+      "title": "Spiritual Exercises Retreat",
+      "date": "2026-08-05",
+      "category": "retreats",
+      "tag": "Silent Retreat",
+      "location": "Debre Zeit (Galilee)",
+      "image": "images/photo_2026-08-08_10-00-41.jpg",
+      "alt": "Galilee Centre Silent Retreat",
+      "text": "Three days of guided contemplative prayer and personal spiritual direction."
+    },
+    {
+      "title": "University Students Vocation Day",
+      "date": "2026-08-04",
+      "category": "youth",
+      "tag": "Youth Ministry",
+      "location": "Hawassa Campus",
+      "image": "images/photo_2026-08-08_10-00-43.jpg",
+      "alt": "Youth Outreach Fellowship",
+      "text": "Youth circle exploring life choices, professional ethics, and Christian leadership."
+    },
+    {
+      "title": "Feast of St. Ignatius of Loyola",
+      "date": "2026-07-31",
+      "category": "assemblies",
+      "tag": "Celebrating Our Roots",
+      "location": "July 31, 2026",
+      "image": "St. Ignatius.jpg",
+      "alt": "Feast of St. Ignatius Celebration",
+      "text": "Today, our Christian Life Community (CLC) family joins the global Church in celebrating the Feast of St. Ignatius of Loyola, the founder of the Jesuits and the source of the Ignatian spirituality that shapes our way of life."
+    },
+    {
+      "title": "Gather in Faith, Grow in Love with CLC Family Gathering",
+      "date": "2026-07-30",
+      "category": "youth",
+      "tag": "Family CLC",
+      "location": "Addis Abeba Family CLC",
+      "image": "Family.jpg",
+      "alt": "Apostolic Outreach Solidarity",
+      "text": "We are filled with gratitude as we look back on our recent CLC Family Gathering! It was a beautiful day of fellowship, prayer, and shared laughter as members from all generations came together to strengthen our bonds."
+    },
+    {
+      "title": "Small Group Faith Sharing",
+      "date": "2026-07-29",
+      "category": "retreats",
+      "tag": "Formation",
+      "location": "Sodo Hub",
+      "image": "assets/img/events/event-6.jpg",
+      "alt": "Evening Reflection & Examen",
+      "text": "Bi-weekly meeting for Gospel contemplation and Ignatian consciousness review."
+    }
+  ]
+}
